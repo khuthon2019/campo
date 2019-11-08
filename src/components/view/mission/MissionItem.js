@@ -1,13 +1,11 @@
 import React from 'react';
 import {inject} from 'mobx-react';
 import styled from 'styled-components/native';
-import Ranking from '../../components/view/ranking/Ranking';
-import colors from '../../colors/colors';
 
 @inject(stores => ({
   setNav: stores.nav.setNav,
 }))
-class RankingScreen extends React.Component {
+class MissionItem extends React.Component {
   constructor(props) {
     super(props);
 
@@ -16,24 +14,21 @@ class RankingScreen extends React.Component {
   componentDidMount() {}
 
   render() {
+    const {data} = this.props;
+
     return (
       <Container>
-        <RankingContainer>
-          <Ranking />
-        </RankingContainer>
+        <MissionTitle>{data.title}</MissionTitle>
       </Container>
     );
   }
 }
 
 const Container = styled.View`
-  flex: 1;
   display: flex;
-  background-color: ${colors.main};
 `;
-const RankingContainer = styled.View`
-  flex: 1;
-  width: 100%;
+const MissionTitle = styled.Text`
+  color: white;
 `;
 
-export default RankingScreen;
+export default MissionItem;

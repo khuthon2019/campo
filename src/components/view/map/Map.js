@@ -33,7 +33,6 @@ class Map extends Component {
   }
 
   onMarkerPress = marker => {
-    console.log('jb: marker', marker);
     this.openMission();
   };
 

@@ -18,6 +18,31 @@ const RANKINGS = [
     name: faker.lorem.word(),
     rank: 2,
   },
+  {
+    id: faker.random.uuid(),
+    name: faker.lorem.word(),
+    rank: 3,
+  },
+  {
+    id: faker.random.uuid(),
+    name: faker.lorem.word(),
+    rank: 4,
+  },
+  {
+    id: faker.random.uuid(),
+    name: faker.lorem.word(),
+    rank: 5,
+  },
+  {
+    id: faker.random.uuid(),
+    name: faker.lorem.word(),
+    rank: 6,
+  },
+  {
+    id: faker.random.uuid(),
+    name: faker.lorem.word(),
+    rank: 7,
+  },
 ];
 
 class Ranking extends Component {
@@ -38,8 +63,7 @@ class Ranking extends Component {
     onPressItem && onPressItem(item);
   };
 
-  _onEndReached = () => {
-  };
+  _onEndReached = () => {};
 
   _renderItem = ({item, index}) => {
     return (
@@ -59,6 +83,7 @@ class Ranking extends Component {
           renderItem={this._renderItem}
           onEndReachedThreshold={1}
           onEndReached={this._onEndReached}
+          showsVerticalScrollIndicator={false}
         />
       </Container>
     );

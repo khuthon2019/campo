@@ -57,8 +57,6 @@ RankingItem.defaultProps = {
 const Container = styled.TouchableWithoutFeedback``;
 const InnerContainer = styled.View`
   position: relative;
-  border-bottom-width: 1;
-  border-bottom-color: ${colors.veryLightBlue};
   padding: 19.5px 38px 19.5px 25px;
   display: flex;
   flex-direction: row;

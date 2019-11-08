@@ -1,6 +1,8 @@
 import {createDrawerNavigator, createAppContainer} from 'react-navigation';
 import React from 'react';
 import colors from '../colors/colors';
+import HomeScreen from '../screens/Home/HomeScreen';
+import TabIcon from '../components/view/icon/TabIcon';
 
 const defaultNavOptions = ({navigation}) => {
   const {routeName} = navigation.state;
@@ -8,12 +10,13 @@ const defaultNavOptions = ({navigation}) => {
   switch (routeName) {
     default:
       return {
+        drawerIcon: () => <TabIcon type={'Home'} />,
       };
   }
 };
 
 let Drawers = {
-  Home: {screen: Tab.HomeTab, navigationOptions: defaultNavOptions},
+  Home: {screen: HomeScreen, navigationOptions: defaultNavOptions},
 };
 
 export const DrawersConfig = Object.keys(Drawers).reduce((acc, cur) => {

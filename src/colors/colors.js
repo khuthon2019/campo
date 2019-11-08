@@ -1,6 +1,6 @@
 const colors = {
-  main: '#080808',
-  inactive: '#808080',
+  main: '#191923',
+  yellow: '#F2CE1C',
 
   periwinkleGray: '#DEE4F1',
   abbey: '#58595f',

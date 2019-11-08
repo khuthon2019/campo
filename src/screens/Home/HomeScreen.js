@@ -4,6 +4,8 @@ import Geolocation from '@react-native-community/geolocation';
 import styled from 'styled-components/native';
 import Map from '../../components/view/map/Map';
 import Header from '../../components/view/header/Header';
+import colors from '../../colors/colors';
+import { MapStyle } from '../../constants/styles';
 
 @inject(stores => ({
   setNav: stores.nav.setNav,
@@ -58,9 +60,9 @@ class HomeScreen extends React.Component {
 
     return (
       <Container>
-        <Header />
+        <Header needBottom />
         <MapContainer>
-          <Map region={region} />
+          <Map customMapStyle={MapStyle} region={region} />
         </MapContainer>
       </Container>
     );
@@ -72,11 +74,12 @@ const Container = styled.View`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: ${colors.main};
 `;
 const MapContainer = styled.View`
   height: 100%;
   width: 100%;
   flex: 1;
-`
+`;
 
 export default HomeScreen;
