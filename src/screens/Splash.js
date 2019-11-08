@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import {inject} from 'mobx-react';
-import Home from './Tabs/HomeTab/Home';
 
 @inject(stores => ({}))
 class Splash extends React.Component {
@@ -21,7 +20,7 @@ class Splash extends React.Component {
 
     return (
       <Container>
-        <Home />
+        <Text> it works! </Text>
       </Container>
     );
   }
