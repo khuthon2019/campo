@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import {inject} from 'mobx-react';
+import StackContainer from '.';
 
 @inject(stores => ({}))
 class Splash extends React.Component {
@@ -9,7 +10,7 @@ class Splash extends React.Component {
 
     this.state = {};
 
-    // console.disableYellowBox = true;
+    console.disableYellowBox = true;
   }
 
   componentDidMount = async () => {};
@@ -18,20 +19,8 @@ class Splash extends React.Component {
     //render for authorized user
     // return ();
 
-    return (
-      <Container>
-        <Text> it works! </Text>
-      </Container>
-    );
+    return <StackContainer />;
   }
 }
-
-const Container = styled.View`
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-const Text = styled.Text``;
 
 export default Splash;

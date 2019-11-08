@@ -19,3 +19,11 @@ export const StackNavOptions = {
     fontSize: 20,
   },
 };
+
+export const InvisibleNavOptions = {
+  headerStyle: {
+    height: 0,
+  },
+  headerTransparent: true,
+  headerLeft: null,
+};

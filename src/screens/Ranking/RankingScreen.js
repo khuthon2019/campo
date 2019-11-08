@@ -1,23 +1,27 @@
 import React from 'react';
 import {inject} from 'mobx-react';
 import styled from 'styled-components/native';
+import Ranking from '../../components/view/ranking/Ranking';
 
 @inject(stores => ({
   setNav: stores.nav.setNav,
 }))
-class Home extends React.Component {
+class RankingScreen extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+    };
   }
   componentDidMount() {
-    this.props.setNav(this.props.navigation);
   }
-
+  
   render() {
     return (
       <Container>
+        <RankingContainer>
+          <Ranking />
+        </RankingContainer>
       </Container>
     );
   }
@@ -25,6 +29,11 @@ class Home extends React.Component {
 
 const Container = styled.View`
   flex: 1;
+  display: flex;
+`;
+const RankingContainer = styled.View`
+  flex: 1;
+  width: 100%;
 `;
 
-export default Home;
+export default RankingScreen;
